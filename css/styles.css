@@ -43,7 +43,7 @@ h3 {
 }
 
 h3:hover {
-  color: #198754;
+  color: #1b955c;
 }
 
 h4 {
@@ -59,11 +59,11 @@ p {
 }
 
 a.links {
-  color: var(--c,#198754);
+  color: var(--c,#1b955c);
 }
 
 a.links:hover {
-  background-color: #198754;
+  background-color: #1b955c;
   color: white;
 }
 
@@ -211,7 +211,7 @@ ul {
 }
 
 .fa-mobile {
-  background: #198754;
+  background: #1b955c;
   color: white;
 }
 
