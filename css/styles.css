@@ -188,7 +188,7 @@ ul {
   width: 60px;
   text-align: center;
   text-decoration: none;
-  border-radius: 50%;
+  border-radius: 25%;
 }
 
 .fa:hover {
