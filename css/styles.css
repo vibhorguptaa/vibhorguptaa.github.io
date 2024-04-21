@@ -42,6 +42,10 @@ h3 {
   padding-bottom: 10px;
 }
 
+h3:hover {
+  color: #198754;
+}
+
 h4 {
   font-family: 'Rubik', sans-serif;
   color: whitesmoke;
@@ -52,6 +56,15 @@ p {
   font-size: 1.2rem;
   font-weight: 400;
   color: whitesmoke;
+}
+
+a.links {
+  color: var(--c,#198754);
+}
+
+a.links:hover {
+  background-color: #198754;
+  color: white;
 }
 
 .time-text {
@@ -125,7 +138,7 @@ p {
 }
 
 ul {
-  list-style-position: inside;
+  list-style-position: outside;
   list-style-type: square;
 }
 
@@ -194,6 +207,11 @@ ul {
 
 .fa-github {
   background: #4078c0;
+  color: white;
+}
+
+.fa-mobile {
+  background: #198754;
   color: white;
 }
 
