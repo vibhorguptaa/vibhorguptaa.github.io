@@ -262,6 +262,11 @@ btn12.onclick = function() {
   window.open("https://drive.google.com/file/d/1Dz34jEJs5IBqF_xNFXEnNi7038rb4AFl/view", "_blank") //TODO add your link
 }
 
+var btn13 = document.getElementById("btn13");
+btn13.onclick = function() { 
+  window.open("assets/RESUME_VIBHOR_GUPTA_2024.pdf", "_blank") //TODO add your link
+}
+
 //HOBBY MODALS
 
 //BUTTON HOBBY 1
