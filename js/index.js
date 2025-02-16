@@ -267,6 +267,11 @@ btn13.onclick = function() {
   window.open("assets/RESUME_VIBHOR_GUPTA_2025.pdf", "_blank") //TODO add your link
 }
 
+var btn14 = document.getElementById("btn14");
+btn14.onclick = function() { 
+  window.open("https://huggingface.co/collections/dyumat/rlhf-umich-text-summarization-661d7eb09e04cdf186981fef", "_blank") //TODO add your link
+}
+
 var btn15 = document.getElementById("btn15");
 btn15.onclick = function() { 
   window.open("https://drive.google.com/file/d/1npPTz7F22KvLpIosdXFF8yBK0lNEkhti/view", "_blank") //TODO add your link
