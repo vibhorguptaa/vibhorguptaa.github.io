@@ -12,26 +12,26 @@ typewriter
   .start()
 
 
-var granimInstance = new Granim({
-    element: '#canvas-image-blending',
-    direction: 'top-bottom',
-    isPausedWhenNotInView: true,
-    image : {
-        source: 'assets/snow.jpg', //change image for intro section if desired
-        blendingMode: 'multiply',
-    },
-    states : {
-        "default-state": {
-            gradients: [
-                ['#29323c', '#485563'],
-                ['#FF6B6B', '#556270'],
-                ['#80d3fe', '#7ea0c4'],
-                ['#f0ab51', '#eceba3']
-            ],
-            transitionSpeed: 8000
-        }
-    }
-});
+// var granimInstance = new Granim({
+//     element: '#canvas-image-blending',
+//     direction: 'top-bottom',
+//     isPausedWhenNotInView: true,
+//     image : {
+//         source: 'assets/snow.jpg', //change image for intro section if desired
+//         blendingMode: 'multiply',
+//     },
+//     states : {
+//         "default-state": {
+//             gradients: [
+//                 ['#29323c', '#485563'],
+//                 ['#FF6B6B', '#556270'],
+//                 ['#80d3fe', '#7ea0c4'],
+//                 ['#f0ab51', '#eceba3']
+//             ],
+//             transitionSpeed: 8000
+//         }
+//     }
+// });
 
 //BUTTON 1
 // var modal1 = document.getElementById("modal1");
@@ -264,7 +264,7 @@ btn12.onclick = function() {
 
 var btn13 = document.getElementById("btn13");
 btn13.onclick = function() { 
-  window.open("assets/RESUME_VIBHOR_GUPTA_2024.pdf", "_blank") //TODO add your link
+  window.open("assets/RESUME_VIBHOR_GUPTA_2025.pdf", "_blank") //TODO add your link
 }
 
 var btn15 = document.getElementById("btn15");
