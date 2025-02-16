@@ -56,10 +56,17 @@
             <p> Leading the effort to bridge the gap between the fields of Wireless Communication and Machine Learning Algorithms. </p>
             <input type="checkbox" id="toggleExperience99" style="display: none;">
             <ul id="experienceList99">
-              <li class="time-text"><label for="toggleExperience99">Redesigned FR1/FR2 Rx algorithms, including AGC and SPURLIC, to enhance RF performance.</li>
+              <li class="time-text"><label for="toggleExperience99"></label>Redesigned FR1/FR2 Rx algorithms, including AGC and SPURLIC, to enhance RF performance.</li>
               <li class="time-text"><label for="toggleExperience99"></label>Developed a CNN model for frequency-independent IQ imbalance prediction, validated feasibility for hardware integration.</li>
             </ul>
-            <label for="toggleExperience99" style="padding-bottom: 5px;" class="btn btn-outline-success" disabled>More Details</label>
+            <label for="toggleExperience99" style="padding-bottom: 5px;" class="btn btn-outline-success" id="toggleLabel99">More Details</label>
+            <script>
+              document.getElementById("toggleExperience99").addEventListener("change", function() {
+                let label = document.getElementById("toggleLabel99");
+                label.textContent = this.checked ? "Less Details" : "More Details";
+              });
+            </script>
+            <!-- <label for="toggleExperience99" style="padding-bottom: 5px;" class="btn btn-outline-success">More Details</label> -->
           </div>
           <div class="small-container-right">
             <img src="assets/Qc.png" class="exp-image">
@@ -75,9 +82,15 @@
             <p>Working on development of a Reinforcement Learning algorithm to handle scheduling and queue length management under heavy traffic conditions in Wired and Wireless Communication Systems. </p>
             <input type="checkbox" id="toggleExperience1" style="display: none;">
             <ul id="experienceList1">
-              <li class="time-text"><label for="toggleExperience1">Implemented a Multi-step Deep Q Network Target, to solve a complex queue serving problem, in a Criss-Cross Network.</li>
+              <li class="time-text"><label for="toggleExperience1"></label>Implemented a Multi-step Deep Q Network Target, to solve a complex queue serving problem, in a Criss-Cross Network.</li>
             </ul>
-            <label for="toggleExperience1" style="padding-bottom: 5px;" class="btn btn-outline-success">More Details</label>
+            <label for="toggleExperience1" style="padding-bottom: 5px;" class="btn btn-outline-success" id="toggleLabel1">More Details</label>
+            <script>
+              document.getElementById("toggleExperience1").addEventListener("change", function() {
+                let label = document.getElementById("toggleLabel1");
+                label.textContent = this.checked ? "Less Details" : "More Details";
+              });
+            </script>
           </div>
           <div class="small-container-right">
             <img src="assets/UOFMLOGO.png" class="exp-image">
@@ -93,11 +106,17 @@
             <p>Redesigned and implemented an algorithm in a Real Time Embedded System, that allows for a faster convergence of Residual Side Bands in a direct conversion receiver.</p>
             <input type="checkbox" id="toggleExperience2" style="display: none;">
             <ul id="experienceList2">
-              <li class="time-text"><label for="toggleExperience2">Re-designed an algorithm for Frequency Independent Side Band suppression which provides SNR improvements.</li>
-              <li class="time-text"><label for="toggleExperience2">Revamped the call-flows between co-procs to allow for faster convergence times, and less memory operations.</li>
-              <li class="time-text"><label for="toggleExperience2">Delivered significant optimizations to Sideband Calibration timeline by 30%.</li>
+              <li class="time-text"><label for="toggleExperience2"></label>Re-designed an algorithm for Frequency Independent Side Band suppression which provides SNR improvements.</li>
+              <li class="time-text"><label for="toggleExperience2"></label>Revamped the call-flows between co-procs to allow for faster convergence times, and less memory operations.</li>
+              <li class="time-text"><label for="toggleExperience2"></label>Delivered significant optimizations to Sideband Calibration timeline by 30%.</li>
             </ul>
-            <label for="toggleExperience2" style="padding-bottom: 5px;" class="btn btn-outline-success">More Details</label>
+            <label for="toggleExperience2" style="padding-bottom: 5px;" class="btn btn-outline-success id="toggleLabel2">More Details</label>
+            <script>
+              document.getElementById("toggleExperience2").addEventListener("change", function() {
+                let label = document.getElementById("toggleLabel2");
+                label.textContent = this.checked ? "Less Details" : "More Details";
+              });
+            </script>
           </div>
           <div class="small-container-right">
             <img src="assets/Qc2.png" class="exp-image">
@@ -113,12 +132,18 @@
             <p>Spearheading the design and commercialization of the first DSDA+V2X modem.</p>
             <input type="checkbox" id="toggleExperience3" style="display: none;">
             <ul id="experienceList3">
-              <li class="time-text"><label for="toggleExperience3">Led LTE -V2X RFSW team for design, commercialization and support for the first DSDA+V2X Modem by Qualcomm.</label></li>
-              <li class="time-text"><label for="toggleExperience3">Developed RFSW solutions maintaining functionality of LTE, NR V2X as per the 3GPP spec (ex: ACLR, SEM, EVM).</label></li>
-              <li class="time-text"><label for="toggleExperience3">Focused on Physical layer programming of front end embedded HW modules (PLL’s, LNA’s, PA’s) to facilitate communication and transfer of data across protocol layers.</label></li>
-              <li class="time-text"><label for="toggleExperience3">Execution of a Real time Embedded System environment with close time and memory constraints to honor the SW architecture and enable a reliable modem subsystem.</label></li>
+              <li class="time-text"><label for="toggleExperience3"></label>Led LTE -V2X RFSW team for design, commercialization and support for the first DSDA+V2X Modem by Qualcomm.</label></li>
+              <li class="time-text"><label for="toggleExperience3"></label>Developed RFSW solutions maintaining functionality of LTE, NR V2X as per the 3GPP spec (ex: ACLR, SEM, EVM).</label></li>
+              <li class="time-text"><label for="toggleExperience3"></label>Focused on Physical layer programming of front end embedded HW modules (PLL’s, LNA’s, PA’s) to facilitate communication and transfer of data across protocol layers.</label></li>
+              <li class="time-text"><label for="toggleExperience3"></label>Execution of a Real time Embedded System environment with close time and memory constraints to honor the SW architecture and enable a reliable modem subsystem.</label></li>
             </ul>
-            <label for="toggleExperience3" style="padding-bottom: 5px;" class="btn btn-outline-success">More Details</label>
+            <label for="toggleExperience3" style="padding-bottom: 5px;" class="btn btn-outline-success" id="toggleLabel3">More Details</label>
+            <script>
+              document.getElementById("toggleExperience3").addEventListener("change", function() {
+                let label = document.getElementById("toggleLabel3");
+                label.textContent = this.checked ? "Less Details" : "More Details";
+              });
+            </script>
           </div>
           <div class="small-container-right">
           <a href="https://www.qualcomm.com/products/automotive/connectivity-positioning/snapdragon-auto-5g-modem-rf">
@@ -136,11 +161,17 @@
             <p>Developed Modem protocol procedures for support in Galaxy A Devices.</p>
             <input type="checkbox" id="toggleExperience4" style="display: none;">
             <ul id="experienceList4">
-              <li class="time-text"><label for="toggleExperience3">Troubleshot Modem protocol procedures for support in Galaxy A Devices, delivering 3GPP compliant performance.</label></li>
-              <li class="time-text"><label for="toggleExperience3">Analyzing the protocol logs across RRC, MAC, debugged Handover and CSFB Scenarios to establish the root cause.</label></li>
-              <li class="time-text"><label for="toggleExperience3">Designing and developing interface between modem and application, call processing of 3GPP/GSM/LTE/IMS.</label></li>
+              <li class="time-text"><label for="toggleExperience3"></label>Troubleshot Modem protocol procedures for support in Galaxy A Devices, delivering 3GPP compliant performance.</li>
+              <li class="time-text"><label for="toggleExperience3"></label>Analyzing the protocol logs across RRC, MAC, debugged Handover and CSFB Scenarios to establish the root cause.</li>
+              <li class="time-text"><label for="toggleExperience3"></label>Designing and developing interface between modem and application, call processing of 3GPP/GSM/LTE/IMS.</li>
               </ul>
-            <label for="toggleExperience4" style="padding-bottom: 5px;" class="btn btn-outline-success">More Details</label>
+            <label for="toggleExperience4" style="padding-bottom: 5px;" class="btn btn-outline-success" id="toggleLabel4">More Details</label>
+            <script>
+              document.getElementById("toggleExperience4").addEventListener("change", function() {
+                let label = document.getElementById("toggleLabel4");
+                label.textContent = this.checked ? "Less Details" : "More Details";
+              });
+            </script>
           </div>
           <div class="small-container-right">
             <img src="assets/ssr2.png" class="exp-image">
