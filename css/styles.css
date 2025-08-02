@@ -360,20 +360,23 @@ a .card-image {
 .toggle-label {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: transparent;
-  border: 2px solid var(--accent-color);
+  gap: 8px;
+  padding: 10px 24px;
+  background: var(--gradient-primary);
+  border: none;
   border-radius: var(--border-radius);
-  color: var(--accent-color);
+  color: white;
   cursor: pointer;
   transition: var(--transition);
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: var(--shadow-light);
+  min-height: 40px;
 }
 
 .toggle-label:hover {
-  background: var(--accent-color);
-  color: var(--primary-bg);
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-2px);
 }
 
 .details-list {
@@ -390,15 +393,8 @@ a .card-image {
 .details-list li {
   color: var(--secondary-text);
   margin-bottom: 0.5rem;
-  padding-left: 1rem;
-  position: relative;
-}
-
-.details-list li::before {
-  content: '▸';
-  position: absolute;
-  left: 0;
-  color: var(--accent-color);
+  padding-left: 0;
+  list-style: none;
 }
 
 /* Project Grid */
