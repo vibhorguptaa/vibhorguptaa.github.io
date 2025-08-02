@@ -579,15 +579,12 @@ a .card-image {
     animation: none !important;
   }
   
-  .card-header {
-    flex-direction: column;
-    text-align: center;
-  }
-  
   /* Show image before text on mobile */
   .card-header {
     display: flex;
     flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
   }
   
   .card-image {
@@ -595,7 +592,13 @@ a .card-image {
     margin-bottom: 1rem;
   }
   
-  /* Ensure linked images are centered on mobile */
+  /* Ensure linked images and their containers are centered on mobile */
+  .card-header > a {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+  }
+  
   a .card-image {
     margin: 0 auto 1rem auto;
   }
