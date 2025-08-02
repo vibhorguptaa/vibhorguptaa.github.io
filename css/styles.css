@@ -318,6 +318,11 @@ p {
   padding: 0.5rem;
 }
 
+/* Ensure linked images maintain proper alignment */
+a .card-image {
+  display: block;
+}
+
 /* Personal photo styling */
 .card-image.personal-photo {
   width: 160px;
@@ -588,6 +593,11 @@ p {
   .card-image {
     align-self: center;
     margin-bottom: 1rem;
+  }
+  
+  /* Ensure linked images are centered on mobile */
+  a .card-image {
+    margin: 0 auto 1rem auto;
   }
   
   .projects-grid {
