@@ -195,11 +195,6 @@ function logPerformance() {
 
 // Dynamic Tech Background
 function createTechBackground() {
-  // Skip background creation on mobile devices for performance
-  if (window.innerWidth <= 768) {
-    return;
-  }
-  
   const techBg = document.createElement('div');
   techBg.className = 'tech-background';
   document.body.appendChild(techBg);

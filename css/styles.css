@@ -557,8 +557,21 @@ p {
   }
   
   /* Disable background animations on mobile for performance */
-  .tech-background {
-    display: none;
+  .neural-node,
+  .neural-connection,
+  .cell-tower,
+  .signal-wave,
+  .rf-line,
+  .binary-rain,
+  .network-icon,
+  .particle,
+  .circuit-line {
+    animation: none !important;
+  }
+  
+  .neural-node::before,
+  .cell-tower::after {
+    animation: none !important;
   }
   
   .card-header {
