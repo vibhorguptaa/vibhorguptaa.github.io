@@ -1,5 +1,7 @@
-var app = document.getElementById('app');
+// Modern Portfolio JavaScript
 
+// Typewriter Effect
+var app = document.getElementById('app');
 var typewriter = new Typewriter(app, {
   loop: true,
   delay: 75,
@@ -7,430 +9,355 @@ var typewriter = new Typewriter(app, {
 
 typewriter
   .pauseFor(1000)
-  .typeString('I am a Passionate Engineer in Communication and Information Systems and a Research Enthusiast.') //Add your own tagline
+  .typeString('Bridging the gap between 5G today and 6G tomorrow, one algorithm at a time.')
+  .pauseFor(2000)
+  .deleteAll()
+  .typeString('Where wireless meets AI: designing the future of connectivity through intelligent RF systems.')
+  .pauseFor(2000)
+  .deleteAll()
+  .typeString('From mmWave modems to reinforcement learning — engineering the invisible threads that connect our world.')
   .pauseFor(3000)
-  .start()
+  .start();
 
+// Scroll Animations
+function initScrollAnimations() {
+  const animatedElements = document.querySelectorAll('.animate-on-scroll');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
 
-// var granimInstance = new Granim({
-//     element: '#canvas-image-blending',
-//     direction: 'top-bottom',
-//     isPausedWhenNotInView: true,
-//     image : {
-//         source: 'assets/snow.jpg', //change image for intro section if desired
-//         blendingMode: 'multiply',
-//     },
-//     states : {
-//         "default-state": {
-//             gradients: [
-//                 ['#29323c', '#485563'],
-//                 ['#FF6B6B', '#556270'],
-//                 ['#80d3fe', '#7ea0c4'],
-//                 ['#f0ab51', '#eceba3']
-//             ],
-//             transitionSpeed: 8000
-//         }
-//     }
-// });
-
-//BUTTON 1
-// var modal1 = document.getElementById("modal1");
-
-// // Get the button that opens the modal
-// var btnModal1 = document.getElementById("btn1");
-
-// // Get the <span> element that closes the modal
-// var spanModal1 = document.getElementsByClassName("closeModal1")[0];
-
-// // When the user clicks on the button, open the modal
-// btnModal1.onclick = function() {
-//   modal1.style.display = "block";
-// }
-
-// // When the user clicks on <span> (x), close the modal
-// spanModal1.onclick = function() {
-//   modal1.style.display = "none";
-// }
-
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//   if (event.target == modal1) {
-//     modal1.style.display = "none";
-//   }
-// }
-
-// //BUTTON 2
-// var modal2 = document.getElementById("modal2");
-
-// // Get the button that opens the modal
-// var btnModal2 = document.getElementById("btn2");
-
-// // Get the <span> element that closes the modal
-// var spanModal2 = document.getElementsByClassName("closeModal2")[0];
-
-// // When the user clicks on the button, open the modal
-// btnModal2.onclick = function() {
-//   modal2.style.display = "block";
-// }
-
-// // When the user clicks on <span> (x), close the modal
-// spanModal2.onclick = function() {
-//   modal2.style.display = "none";
-// }
-
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//   if (event.target == modal2) {
-//     modal2.style.display = "none";
-//   }
-// }
-
-// // //BUTTON 3 -- links to outside website
-// // var btn3 = document.getElementById("btn3");
-// // btn3.onclick = function() { 
-// //   window.open("https://www.nintendo.com", "_blank") //TODO add your link
-// // }
-// var modal3 = document.getElementById("modal3");
-
-// // Get the button that opens the modal
-// var btnModal3 = document.getElementById("btn3");
-
-// // Get the <span> element that closes the modal
-// var spanModal3 = document.getElementsByClassName("closeModal3")[0];
-
-// // When the user clicks on the button, open the modal
-// btnModal3.onclick = function() {
-//   modal3.style.display = "block";
-// }
-
-// // When the user clicks on <span> (x), close the modal
-// spanModal3.onclick = function() {
-//   modal3.style.display = "none";
-// }
-
-// //BUTTON 4
-// var modal4 = document.getElementById("modal4");
-
-// // Get the button that opens the modal
-// var btnModal4 = document.getElementById("btn4");
-
-// // Get the <span> element that closes the modal
-// var spanModal4 = document.getElementsByClassName("closeModal4")[0];
-
-// // When the user clicks on the button, open the modal
-// btnModal4.onclick = function() {
-//   modal4.style.display = "block";
-// }
-
-// // When the user clicks on <span> (x), close the modal
-// spanModal4.onclick = function() {
-//   modal4.style.display = "none";
-// }
-
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//   if (event.target == modal4) {
-//     modal4.style.display = "none";
-//   }
-// }
-
-//BUTTON 5
-var modal5 = document.getElementById("modal5");
-
-// Get the button that opens the modal
-var btnModal5 = document.getElementById("btn5");
-
-// Get the <span> element that closes the modal
-var spanModal5 = document.getElementsByClassName("closeModal5")[0];
-
-// When the user clicks on the button, open the modal
-btnModal5.onclick = function() {
-  modal5.style.display = "block";
+  animatedElements.forEach(element => {
+    observer.observe(element);
+  });
 }
 
-// When the user clicks on <span> (x), close the modal
-spanModal5.onclick = function() {
-  modal5.style.display = "none";
+// Modern Toggle Functionality
+function initToggleHandlers() {
+  const toggles = [
+    { id: 'toggleExperience99', labelId: 'toggleLabel99' },
+    { id: 'toggleExperience1', labelId: 'toggleLabel1' },
+    { id: 'toggleExperience2', labelId: 'toggleLabel2' },
+    { id: 'toggleExperience3', labelId: 'toggleLabel3' },
+    { id: 'toggleExperience4', labelId: 'toggleLabel4' }
+  ];
+
+  toggles.forEach(toggle => {
+    const checkbox = document.getElementById(toggle.id);
+    const label = document.getElementById(toggle.labelId);
+    
+    if (checkbox && label) {
+      checkbox.addEventListener('change', function() {
+        label.textContent = this.checked ? 'Less Details' : 'More Details';
+        
+        // Add smooth transition effect
+        const detailsList = this.nextElementSibling.nextElementSibling;
+        if (detailsList) {
+          if (this.checked) {
+            detailsList.style.maxHeight = detailsList.scrollHeight + 'px';
+          } else {
+            detailsList.style.maxHeight = '0px';
+          }
+        }
+      });
+    }
+  });
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal5) {
-    modal5.style.display = "none";
+// Button Event Handlers
+function initButtonHandlers() {
+  // External link buttons
+  const buttonMap = {
+    'btn9': 'https://github.com/vibhorguptaa/REDD',
+    'btn10': 'https://drive.google.com/file/d/15ZvI5zNGK1gu75SpL1oZyRUMNCs3yKI-/view',
+    'btn11': 'https://drive.google.com/file/d/1Yc8qQuPcZRyRhPt83A9489TXNT7BD5BD/view',
+    'btn12': 'https://drive.google.com/file/d/1Dz34jEJs5IBqF_xNFXEnNi7038rb4AFl/view',
+    'btn13': 'assets/RESUME_VIBHOR_GUPTA_2025.pdf',
+    'btn14': 'https://huggingface.co/collections/dyumat/rlhf-umich-text-summarization-661d7eb09e04cdf186981fef',
+    'btn15': 'https://drive.google.com/file/d/1npPTz7F22KvLpIosdXFF8yBK0lNEkhti/view'
+  };
+
+  Object.entries(buttonMap).forEach(([btnId, url]) => {
+    const btn = document.getElementById(btnId);
+    if (btn) {
+      btn.onclick = function() {
+        window.open(url, '_blank');
+      };
+    }
+  });
+}
+
+// Smooth Scrolling for Internal Links
+function initSmoothScrolling() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+}
+
+// Loading Animation
+function showLoading(button) {
+  const originalText = button.textContent;
+  button.innerHTML = '<span class="loading"></span> Loading...';
+  button.disabled = true;
+  
+  setTimeout(() => {
+    button.textContent = originalText;
+    button.disabled = false;
+  }, 2000);
+}
+
+// Enhanced Button Interactions
+function initEnhancedButtons() {
+  document.querySelectorAll('.btn-modern').forEach(button => {
+    button.addEventListener('click', function(e) {
+      // Add ripple effect
+      const ripple = document.createElement('span');
+      const rect = this.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const x = e.clientX - rect.left - size / 2;
+      const y = e.clientY - rect.top - size / 2;
+      
+      ripple.style.width = ripple.style.height = size + 'px';
+      ripple.style.left = x + 'px';
+      ripple.style.top = y + 'px';
+      ripple.classList.add('ripple');
+      
+      this.appendChild(ripple);
+      
+      setTimeout(() => {
+        ripple.remove();
+      }, 600);
+    });
+  });
+}
+
+// Parallax Effect for Hero Section
+function initParallax() {
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const hero = document.querySelector('.hero-section');
+    if (hero) {
+      hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+    }
+  });
+}
+
+// Theme Toggle (Optional Enhancement)
+function initThemeToggle() {
+  const themeToggle = document.createElement('button');
+  themeToggle.className = 'theme-toggle';
+  themeToggle.innerHTML = '🌙';
+  themeToggle.style.position = 'fixed';
+  themeToggle.style.top = '20px';
+  themeToggle.style.right = '20px';
+  themeToggle.style.zIndex = '1000';
+  themeToggle.style.background = 'var(--accent-color)';
+  themeToggle.style.border = 'none';
+  themeToggle.style.borderRadius = '50%';
+  themeToggle.style.width = '50px';
+  themeToggle.style.height = '50px';
+  themeToggle.style.fontSize = '20px';
+  themeToggle.style.cursor = 'pointer';
+  themeToggle.style.transition = 'all 0.3s ease';
+  
+  // Uncomment to add theme toggle
+  // document.body.appendChild(themeToggle);
+  
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-theme');
+    themeToggle.innerHTML = document.body.classList.contains('light-theme') ? '☀️' : '🌙';
+  });
+}
+
+// Performance Monitoring
+function logPerformance() {
+  window.addEventListener('load', () => {
+    const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+    console.log(`Page loaded in ${loadTime}ms`);
+  });
+}
+
+// Dynamic Tech Background
+function createTechBackground() {
+  const techBg = document.createElement('div');
+  techBg.className = 'tech-background';
+  document.body.appendChild(techBg);
+  
+  // Create Neural Network Nodes
+  for (let i = 0; i < 15; i++) {
+    const node = document.createElement('div');
+    node.className = 'neural-node';
+    node.style.left = Math.random() * 100 + '%';
+    node.style.top = Math.random() * 100 + '%';
+    node.style.animationDelay = Math.random() * 3 + 's';
+    techBg.appendChild(node);
+  }
+  
+  // Create Neural Connections
+  for (let i = 0; i < 8; i++) {
+    const connection = document.createElement('div');
+    connection.className = 'neural-connection';
+    connection.style.left = Math.random() * 80 + '%';
+    connection.style.top = Math.random() * 100 + '%';
+    connection.style.width = Math.random() * 200 + 100 + 'px';
+    connection.style.transform = `rotate(${Math.random() * 360}deg)`;
+    connection.style.animationDelay = Math.random() * 6 + 's';
+    techBg.appendChild(connection);
+  }
+  
+  // Create Cell Towers
+  for (let i = 0; i < 5; i++) {
+    const tower = document.createElement('div');
+    tower.className = 'cell-tower';
+    tower.style.left = Math.random() * 90 + '%';
+    tower.style.bottom = '0';
+    tower.style.height = Math.random() * 150 + 50 + 'px';
+    tower.style.animationDelay = Math.random() * 4 + 's';
+    techBg.appendChild(tower);
+  }
+  
+  // Create Signal Waves
+  for (let i = 0; i < 10; i++) {
+    const wave = document.createElement('div');
+    wave.className = 'signal-wave';
+    wave.style.left = Math.random() * 100 + '%';
+    wave.style.top = Math.random() * 100 + '%';
+    wave.style.animationDelay = Math.random() * 4 + 's';
+    techBg.appendChild(wave);
+  }
+  
+  // Create RF Lines
+  for (let i = 0; i < 6; i++) {
+    const rfLine = document.createElement('div');
+    rfLine.className = 'rf-line';
+    rfLine.style.top = Math.random() * 100 + '%';
+    rfLine.style.width = '100%';
+    rfLine.style.animationDelay = Math.random() * 8 + 's';
+    techBg.appendChild(rfLine);
+  }
+  
+  // Create Binary Rain
+  for (let i = 0; i < 20; i++) {
+    const binary = document.createElement('div');
+    binary.className = 'binary-rain';
+    binary.textContent = Math.random() > 0.5 ? '1' : '0';
+    binary.style.left = Math.random() * 100 + '%';
+    binary.style.animationDelay = Math.random() * 10 + 's';
+    binary.style.animationDuration = (Math.random() * 5 + 5) + 's';
+    techBg.appendChild(binary);
+  }
+  
+  // Create Network Icons (5G/6G)
+  const networkIcons = ['5G', '6G', 'RF', 'AI', 'IoT', 'mmW'];
+  for (let i = 0; i < 6; i++) {
+    const icon = document.createElement('div');
+    icon.className = 'network-icon';
+    icon.textContent = networkIcons[i];
+    icon.style.left = Math.random() * 90 + '%';
+    icon.style.top = Math.random() * 90 + '%';
+    icon.style.animationDelay = Math.random() * 6 + 's';
+    techBg.appendChild(icon);
+  }
+  
+  // Create Particles
+  for (let i = 0; i < 30; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.animationDelay = Math.random() * 15 + 's';
+    particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+    techBg.appendChild(particle);
+  }
+  
+  // Create Circuit Lines
+  for (let i = 0; i < 12; i++) {
+    const circuit = document.createElement('div');
+    circuit.className = 'circuit-line';
+    circuit.style.left = Math.random() * 100 + '%';
+    circuit.style.top = Math.random() * 100 + '%';
+    circuit.style.width = Math.random() * 300 + 100 + 'px';
+    circuit.style.transform = `rotate(${Math.random() * 180}deg)`;
+    circuit.style.animationDelay = Math.random() * 6 + 's';
+    techBg.appendChild(circuit);
   }
 }
 
-//BUTTON 6 -- links to outside website
-// var btn6 = document.getElementById("btn6");
-// btn6.onclick = function() { 
-//   window.open("https://www.arduino.cc", "_blank") //TODO add your link
-// }
-var modal6 = document.getElementById("modal6");
-
-// Get the button that opens the modal
-var btnModal6 = document.getElementById("btn6");
-
-// Get the <span> element that closes the modal
-var spanModal6 = document.getElementsByClassName("closeModal6")[0];
-
-// When the user clicks on the button, open the modal
-btnModal6.onclick = function() {
-  modal6.style.display = "block";
+// Enhanced Parallax with Tech Elements
+function initTechParallax() {
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const hero = document.querySelector('.hero-section');
+    const techElements = document.querySelectorAll('.neural-node, .signal-wave, .network-icon');
+    
+    if (hero) {
+      hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+    }
+    
+    // Parallax for tech elements
+    techElements.forEach((element, index) => {
+      const speed = 0.2 + (index % 3) * 0.1;
+      element.style.transform += ` translateY(${scrolled * speed}px)`;
+    });
+  });
 }
 
-// When the user clicks on <span> (x), close the modal
-spanModal6.onclick = function() {
-  modal6.style.display = "none";
-}
+// Initialize all functionality
+document.addEventListener('DOMContentLoaded', function() {
+  createTechBackground();
+  initScrollAnimations();
+  initToggleHandlers();
+  initButtonHandlers();
+  initSmoothScrolling();
+  initEnhancedButtons();
+  initTechParallax();
+  initThemeToggle();
+  logPerformance();
+  
+  console.log('Modern tech portfolio initialized with dynamic background! 🚀🌐');
+});
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal6) {
-    modal6.style.display = "none";
+// Add CSS for ripple effect
+const rippleStyle = document.createElement('style');
+rippleStyle.textContent = `
+  .btn-modern {
+    position: relative;
+    overflow: hidden;
   }
-}
-
-
-//BUTTON 7
-var modal7 = document.getElementById("modal7");
-
-// Get the button that opens the modal
-var btnModal7 = document.getElementById("btn7");
-
-// Get the <span> element that closes the modal
-var spanModal7 = document.getElementsByClassName("closeModal7")[0];
-
-// When the user clicks on the button, open the modal
-btnModal7.onclick = function() {
-  modal7.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-spanModal7.onclick = function() {
-  modal7.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal7) {
-    modal7.style.display = "none";
+  
+  .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
   }
-}
-
-//BUTTON 8
-var modal8 = document.getElementById("modal8");
-
-// Get the button that opens the modal
-var btnModal8 = document.getElementById("btn8");
-
-// Get the <span> element that closes the modal
-var spanModal8 = document.getElementsByClassName("closeModal8")[0];
-
-// When the user clicks on the button, open the modal
-btnModal8.onclick = function() {
-  modal8.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-spanModal8.onclick = function() {
-  modal8.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal8) {
-    modal8.style.display = "none";
+  
+  @keyframes ripple-animation {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
   }
-}
-
-
-var btn9 = document.getElementById("btn9");
-btn9.onclick = function() { 
-  window.open("https://github.com/vibhorguptaa/REDD", "_blank") //TODO add your link
-}
-var btn10 = document.getElementById("btn10");
-btn10.onclick = function() { 
-  window.open("https://drive.google.com/file/d/15ZvI5zNGK1gu75SpL1oZyRUMNCs3yKI-/view", "_blank") //TODO add your link
-}
-var btn11 = document.getElementById("btn11");
-btn11.onclick = function() { 
-  window.open("https://drive.google.com/file/d/1Yc8qQuPcZRyRhPt83A9489TXNT7BD5BD/view", "_blank") //TODO add your link
-}
-
-var btn12 = document.getElementById("btn12");
-btn12.onclick = function() { 
-  window.open("https://drive.google.com/file/d/1Dz34jEJs5IBqF_xNFXEnNi7038rb4AFl/view", "_blank") //TODO add your link
-}
-
-var btn13 = document.getElementById("btn13");
-btn13.onclick = function() { 
-  window.open("assets/RESUME_VIBHOR_GUPTA_2025.pdf", "_blank") //TODO add your link
-}
-
-var btn14 = document.getElementById("btn14");
-btn14.onclick = function() { 
-  window.open("https://huggingface.co/collections/dyumat/rlhf-umich-text-summarization-661d7eb09e04cdf186981fef", "_blank") //TODO add your link
-}
-
-var btn15 = document.getElementById("btn15");
-btn15.onclick = function() { 
-  window.open("https://drive.google.com/file/d/1npPTz7F22KvLpIosdXFF8yBK0lNEkhti/view", "_blank") //TODO add your link
-}
-
-//HOBBY MODALS
-
-//BUTTON HOBBY 1
-var modalHobby1 = document.getElementById("modalHobby1");
-
-// Get the button that opens the modal
-var btnHobby1 = document.getElementById("hobbyBtn1");
-
-// Get the <span> element that closes the modal
-var spanModalHobby1 = document.getElementsByClassName("closeModalHobby1")[0];
-
-// When the user clicks on the button, open the modal
-btnHobby1.onclick = function() {
-  modalHobby1.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-spanModalHobby1.onclick = function() {
-  modalHobby1.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modalHobby1) {
-    modalHobby1.style.display = "none";
+  
+  .theme-toggle:hover {
+    transform: scale(1.1);
   }
-}
-
-//BUTTON HOBBY 2
-var modalHobby2 = document.getElementById("modalHobby2");
-
-// Get the button that opens the modal
-var btnHobby2 = document.getElementById("hobbyBtn2");
-
-// Get the <span> element that closes the modal
-var spanModalHobby2 = document.getElementsByClassName("closeModalHobby2")[0];
-
-// When the user clicks on the button, open the modal
-btnHobby2.onclick = function() {
-  modalHobby2.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-spanModalHobby2.onclick = function() {
-  modalHobby2.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modalHobby2) {
-    modalHobby2.style.display = "none";
-  }
-}
-
-//BUTTON HOBBY 3
-var modalHobby3 = document.getElementById("modalHobby3");
-
-// Get the button that opens the modal
-var btnHobby3 = document.getElementById("hobbyBtn3");
-
-// Get the <span> element that closes the modal
-var spanModalHobby3 = document.getElementsByClassName("closeModalHobby3")[0];
-
-// When the user clicks on the button, open the modal
-btnHobby3.onclick = function() {
-  modalHobby3.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-spanModalHobby3.onclick = function() {
-  modalHobby3.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modalHobby3) {
-    modalHobby3.style.display = "none";
-  }
-}
-
-//BUTTON HOBBY 4
-var modalHobby4 = document.getElementById("modalHobby4");
-
-// Get the button that opens the modal
-var btnHobby4 = document.getElementById("hobbyBtn4");
-
-// Get the <span> element that closes the modal
-var spanModalHobby4 = document.getElementsByClassName("closeModalHobby4")[0];
-
-// When the user clicks on the button, open the modal
-btnHobby4.onclick = function() {
-  modalHobby4.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-spanModalHobby4.onclick = function() {
-  modalHobby4.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modalHobby4) {
-    modalHobby4.style.display = "none";
-  }
-}
-
-//BUTTON HOBBY 5
-var modalHobby5 = document.getElementById("modalHobby5");
-
-// Get the button that opens the modal
-var btnHobby5 = document.getElementById("hobbyBtn5");
-
-// Get the <span> element that closes the modal
-var spanModalHobby5 = document.getElementsByClassName("closeModalHobby5")[0];
-
-// When the user clicks on the button, open the modal
-btnHobby5.onclick = function() {
-  modalHobby5.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-spanModalHobby5.onclick = function() {
-  modalHobby5.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modalHobby5) {
-    modalHobby5.style.display = "none";
-  }
-}
-
-//BUTTON HOBBY 6
-var modalHobby6 = document.getElementById("modalHobby6");
-
-// Get the button that opens the modal
-var btnHobby6 = document.getElementById("hobbyBtn6");
-
-// Get the <span> element that closes the modal
-var spanModalHobby6 = document.getElementsByClassName("closeModalHobby6")[0];
-
-// When the user clicks on the button, open the modal
-btnHobby6.onclick = function() {
-  modalHobby6.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-spanModalHobby6.onclick = function() {
-  modalHobby6.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modalHobby6) {
-    modalHobby6.style.display = "none";
-  }
-}
+`;
+document.head.appendChild(rippleStyle);
