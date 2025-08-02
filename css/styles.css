@@ -556,13 +556,25 @@ p {
     padding: 1rem;
   }
   
+  /* Disable background animations on mobile for performance */
+  .tech-background {
+    display: none;
+  }
+  
   .card-header {
     flex-direction: column;
     text-align: center;
   }
   
+  /* Show image before text on mobile */
+  .card-header {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
   .card-image {
     align-self: center;
+    margin-bottom: 1rem;
   }
   
   .projects-grid {
@@ -595,6 +607,17 @@ p {
   .modal-content {
     margin: 10% auto;
     padding: 1.5rem;
+  }
+  
+  /* Further optimize for smaller screens */
+  .card-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .card-image.personal-photo {
+    width: 120px;
+    height: 120px;
   }
 }
 

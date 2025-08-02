@@ -195,6 +195,11 @@ function logPerformance() {
 
 // Dynamic Tech Background
 function createTechBackground() {
+  // Skip background creation on mobile devices for performance
+  if (window.innerWidth <= 768) {
+    return;
+  }
+  
   const techBg = document.createElement('div');
   techBg.className = 'tech-background';
   document.body.appendChild(techBg);
@@ -300,6 +305,11 @@ function createTechBackground() {
 
 // Enhanced Parallax with Tech Elements
 function initTechParallax() {
+  // Skip parallax on mobile devices for performance
+  if (window.innerWidth <= 768) {
+    return;
+  }
+  
   window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero-section');
