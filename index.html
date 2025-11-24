@@ -19,16 +19,34 @@
 </head>
 
 <body class="pattern-bg">
+
+  <!-- Persistent Navigation (Desktop Sidebar / Mobile Header) -->
+  <!-- Persistent Navigation (Desktop Sidebar / Mobile Header) -->
+  <div id="persistent-nav" class="hidden">
+    <div class="nav-content">
+      <a href="#home" class="nav-name">Vibhor Gupta</a>
+      <nav class="persistent-links">
+        <a href="#home" class="p-link" title="Home"><i class="fa fa-home"></i> <span>Home</span></a>
+        <a href="#about" class="p-link" title="About"><i class="fa fa-user"></i> <span>About</span></a>
+        <a href="#experience" class="p-link" title="Experience"><i class="fa fa-briefcase"></i>
+          <span>Experience</span></a>
+        <a href="#projects" class="p-link" title="Projects"><i class="fa fa-code"></i> <span>Projects</span></a>
+        <a href="#contact" class="p-link" title="Contact"><i class="fa fa-envelope"></i> <span>Contact</span></a>
+        <a href="assets/RESUME_VIBHOR_GUPTA_2025.pdf" target="_blank" class="p-link highlight-link" title="Resume"><i
+            class="fa fa-file-text"></i> <span>Resume</span></a>
+      </nav>
+    </div>
+  </div>
   <div class="main-content">
     <!-- Hero Section -->
     <!-- Hero Section -->
     <section class="hero-section" id="home">
       <div class="hero-background">
-        <!-- Interactive background elements will be injected by JS -->
+        <canvas id="hero-canvas"></canvas>
       </div>
       <div class="container hero-content">
         <div class="hero-text">
-          <h1 class="stagger-text">Vibhor Gupta</h1>
+          <h1 class="stagger-text glitch-text" data-text="Vibhor Gupta">Vibhor Gupta</h1>
           <h2 class="stagger-text gradient-text">Wireless Engineer & AI Researcher</h2>
           <p class="stagger-text hero-description">
             Architecting the future of connectivity at <span class="highlight">Qualcomm</span>.
@@ -106,6 +124,7 @@
       <div class="container">
         <h2 class="section-title gradient-text">Experience</h2>
         <div class="timeline">
+          <div class="timeline-line-fill"></div>
 
           <!-- Qualcomm Current -->
           <div class="timeline-item">
